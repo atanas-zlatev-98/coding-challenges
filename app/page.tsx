@@ -16,6 +16,10 @@ export default function Home() {
         <Link href="/fetch-display-data" className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">
           Fetch and Display Data Challenge
         </Link>
+
+         <Link href="/accordion" className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">
+          Accordion Challenge
+        </Link>
       </main>
     </div>
   );
