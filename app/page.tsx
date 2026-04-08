@@ -12,6 +12,10 @@ export default function Home() {
          <Link href="/todo-list" className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">
           To-Do List Challenge
         </Link>
+
+        <Link href="/fetch-display-data" className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">
+          Fetch and Display Data Challenge
+        </Link>
       </main>
     </div>
   );
