@@ -5,4 +5,5 @@ export const pageLinks = [
   { href: "/mini-task-manager", label: "Mini Task Manager Challenge" },
   { href: "/custom-hook", label: "Custom Hook Challenge" },
   { href: "/todo-list", label: "To-Do List Challenge" },
+  { href: "/user-search-filter", label: "User Search Filter Challenge" },
 ];
