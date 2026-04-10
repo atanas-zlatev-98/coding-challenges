@@ -6,4 +6,5 @@ export const pageLinks = [
   { href: "/custom-hook", label: "Custom Hook Challenge" },
   { href: "/todo-list", label: "To-Do List Challenge" },
   { href: "/user-search-filter", label: "User Search Filter Challenge" },
+  { href: "/quiz-app", label: "Quiz App Challenge" }
 ];
