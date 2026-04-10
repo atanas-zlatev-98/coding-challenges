@@ -50,3 +50,6 @@ export const questions = [
     answer: "A state or prop changing"
   }
 ];
+
+
+export const shuffleQuestions = [...questions].sort(() => Math.random() - 0.5);
