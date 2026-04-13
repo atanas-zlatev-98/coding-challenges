@@ -70,7 +70,11 @@ export default function PaginationPage() {
                     ))}
                     <div className="flex gap-2 items-center justify-center mt-4">
                         <button disabled={currentPage === 1} className={`bg-blue-700 p-2 rounded hover:bg-blue-500 ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`} onClick={prevPage}>Previous Page</button>
-                            <p>Page {currentPage} of {totalPages}</p>
+                            <div>
+                                {Array.from({length: totalPages}, (_, i) => i + 1).map(page => (
+                                    <button key={page} className={`mx-1 p-2 rounded cursor-pointer ${currentPage === page ? 'bg-blue-700 text-white' : 'bg-gray-800 hover:bg-gray-500'}`} onClick={() => setCurrentPage(page)}>{page}</button>
+                                ))}
+                            </div>
                         <button disabled={currentPage === totalPages} className={`bg-blue-700 p-2 rounded hover:bg-blue-500 ${currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`} onClick={nextPage}>Next Page</button>
                     </div>
                 </div>
