@@ -8,4 +8,5 @@ export const pageLinks = [
   { href: "/user-search-filter", label: "User Search Filter Challenge" },
   { href: "/quiz-app", label: "Quiz App Challenge" },
   { href: "/shopping-cart", label: "Shopping Cart Challenge" },
+  { href: "/pagination", label: "Pagination Challenge" },
 ];
