@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from "react";
+import { usePagination } from "../use-pagination-hook/usePagination";
 
 type User = {
     id: number;
@@ -11,28 +12,13 @@ type User = {
 }
 
 export default function PaginationPage() {
-
+    
     const [users,setUsers] = useState<User[]>([]);
     const [errors,setErrors] = useState('');
     const [loading,setLoading] = useState(true);
-    const [currentPage,setCurrentPage] = useState(1);
 
-    const usersPerPage = 3;
-    const totalPages = Math.ceil(users.length / usersPerPage);
-    const visibleUsers = users.slice((currentPage - 1) * usersPerPage, currentPage * usersPerPage);
-
-    const nextPage = () =>{
-        if(currentPage < totalPages){
-            setCurrentPage(currentPage + 1);
-        }
-    }
-
-    const prevPage = () =>{
-        if(currentPage > 1){
-            setCurrentPage(currentPage - 1);
-        }
-    }
-
+    const {currentPage, totalPages, visibleItems: visibleUsers, nextPage, prevPage, setPage} = usePagination<User>({items: users, itemsPerPage: 3});
+    
     useEffect(()=>{
         const fetchUsers = async () =>{
             try{
@@ -72,7 +58,7 @@ export default function PaginationPage() {
                         <button disabled={currentPage === 1} className={`bg-blue-700 p-2 rounded hover:bg-blue-500 ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`} onClick={prevPage}>Previous Page</button>
                             <div>
                                 {Array.from({length: totalPages}, (_, i) => i + 1).map(page => (
-                                    <button key={page} className={`mx-1 p-2 rounded cursor-pointer ${currentPage === page ? 'bg-blue-700 text-white' : 'bg-gray-800 hover:bg-gray-500'}`} onClick={() => setCurrentPage(page)}>{page}</button>
+                                    <button key={page} className={`mx-1 p-2 rounded cursor-pointer ${currentPage === page ? 'bg-blue-700 text-white' : 'bg-gray-800 hover:bg-gray-500'}`} onClick={() => setPage(page)}>{page}</button>
                                 ))}
                             </div>
                         <button disabled={currentPage === totalPages} className={`bg-blue-700 p-2 rounded hover:bg-blue-500 ${currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`} onClick={nextPage}>Next Page</button>
