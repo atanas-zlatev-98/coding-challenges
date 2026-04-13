@@ -9,4 +9,5 @@ export const pageLinks = [
   { href: "/quiz-app", label: "Quiz App Challenge" },
   { href: "/shopping-cart", label: "Shopping Cart Challenge" },
   { href: "/pagination", label: "Pagination Challenge" },
+  { href: "/pagination-search", label: "Pagination with Search Challenge" },
 ];
