@@ -10,4 +10,5 @@ export const pageLinks = [
   { href: "/shopping-cart", label: "Shopping Cart Challenge" },
   { href: "/pagination", label: "Pagination Challenge" },
   { href: "/pagination-search", label: "Pagination with Search Challenge" },
+  { href: "/form-validation-zod", label: "Form Validation with Zod Challenge" },
 ];
