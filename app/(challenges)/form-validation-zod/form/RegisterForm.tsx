@@ -43,7 +43,7 @@ export default function RegisterForm() {
         e.preventDefault();
         
         const checkResult = checkValidation<User>(registerFormSchema, formData);
-        
+
         if (!checkResult.success) {
             setValidationErrors({...checkResult.errors});
         } else {
@@ -58,23 +58,23 @@ export default function RegisterForm() {
                 <div className="input-group flex flex-col w-full">
                     <div className="flex flex-col w-full">
                     <label className="mb-2" htmlFor="username">Username:</label>
-                    <input className="bg-white text-black p-2 rounded" type="text" id="username" name="username" value={formData.username} onChange={changeHandler} />
+                    <input className={`bg-white outline-none text-black p-2 rounded ${validationErrors.username ? 'border-b-3 border-red-500' : ''}`} type="text" id="username" name="username" value={formData.username} onChange={changeHandler} />
                     </div>
                     {validationErrors.username && <span className="error text-red-500 pt-1">{validationErrors.username}</span>}
                 </div>
                 <div className="input-group flex flex-col w-full">
                     <label className="mb-2" htmlFor="email">Email:</label>
-                    <input className="bg-white text-black p-2 rounded" type="email" id="email" name="email" value={formData.email} onChange={changeHandler} />
+                    <input className={`bg-white outline-none text-black p-2 rounded ${validationErrors.email ? 'border-b-3 border-red-500' : ''}`} type="email" id="email" name="email" value={formData.email} onChange={changeHandler} />
                     {validationErrors.email && <span className="error text-red-500 pt-1">{validationErrors.email}</span>}
                 </div>
                 <div className="input-group flex flex-col w-full">
                     <label className="mb-2" htmlFor="password">Password:</label>
-                    <input className="bg-white text-black p-2 rounded" type="password" id="password" name="password" value={formData.password} onChange={changeHandler} />
+                    <input className={`bg-white outline-none text-black p-2 rounded ${validationErrors.password ? 'border-b-3 border-red-500' : ''}`} type="password" id="password" name="password" value={formData.password} onChange={changeHandler} />
                     {validationErrors.password && <span className="error text-red-500 pt-1">{validationErrors.password}</span>}
                 </div>
                 <div className="input-group flex flex-col w-full">
                     <label className="mb-2" htmlFor="confirmPassword">Confirm Password:</label>
-                    <input className="bg-white text-black p-2 rounded" type="password" id="confirmPassword" name="confirmPassword" value={formData.confirmPassword} onChange={changeHandler} />
+                    <input className={`bg-white outline-none text-black p-2 rounded ${validationErrors.confirmPassword ? 'border-b-3 border-red-500' : ''}`} type="password" id="confirmPassword" name="confirmPassword" value={formData.confirmPassword} onChange={changeHandler} />
                     {validationErrors.confirmPassword && <span className="error text-red-500 pt-1">{validationErrors.confirmPassword}</span>}
                 </div>
                 <button type="submit" className="bg-blue-500 text-white p-2 rounded hover:bg-blue-800 cursor-pointer">Register</button>
