@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from "react";
-import { usePagination } from "../use-pagination-hook/usePagination";
+import { usePagination } from "../../(hooks)/use-pagination-hook/usePagination";
 
 type User = {
     id: number;
