@@ -1,5 +1,6 @@
 'use client';
 
+import Link from "next/link";
 import { useState } from "react";
 
 const initialState = [
@@ -24,8 +25,12 @@ export default function AccordionPage() {
                         <div className={`${activeId === item.id ? "block" : "hidden"} flex`}>{item.content}</div>
                     </div>
                 ))}
-
             </div>
+
+            <div className="mt-5">
+                <Link href="https://github.com/atanas-zlatev-98/coding-challenges/blob/master/app/(challenges)/accordion/page.tsx" className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">GitHub Link</Link>
+            </div>
+
         </div>
     )
 }

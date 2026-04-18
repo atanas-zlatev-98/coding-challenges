@@ -1,11 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import { useCart } from "./hook/useCart";
 import { products } from "./products/products";
 
 export default function UseReducerPage() {
 
-    const {cart, addItem, removeItem, decreaseQuantity, clearCart, totalPrice, totalProducts} = useCart();
+  const {cart, addItem, removeItem, decreaseQuantity, clearCart, totalPrice, totalProducts} = useCart();
 
   return (
     <div className="flex justify-center items-center h-screen flex-col gap-4 w-screen">
@@ -101,6 +102,10 @@ export default function UseReducerPage() {
           </div>
         </div>
       </div>
+
+      <div className="mt-5">
+              <Link href="https://github.com/atanas-zlatev-98/coding-challenges/tree/master/app/(hooks)/use-reducer" className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">GitHub Link</Link>
+        </div>
     </div>
   );
 }

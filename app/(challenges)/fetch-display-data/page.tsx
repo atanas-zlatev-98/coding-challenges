@@ -1,5 +1,6 @@
 'use client';
 
+import Link from "next/link";
 import { useEffect, useState } from "react"
 
 type UserType = {
@@ -37,7 +38,7 @@ export default function FetchDisplayDataPage() {
      },[])
 
     return (
-        <div className="flex justify-center items-center h-screen">
+        <div className="flex flex-col justify-center items-center h-screen">
             {loading ? <p>Loading...</p> : (
                 <div>
                     {error && <p>Error: {error}</p>}
@@ -47,6 +48,11 @@ export default function FetchDisplayDataPage() {
                     </ul>
                 </div>
             )}
+
+            <div className="mt-5">
+                <Link href="https://github.com/atanas-zlatev-98/coding-challenges/blob/master/app/(challenges)/fetch-display-data/page.tsx" className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">GitHub Link</Link>
+            </div>
+
         </div>
     )
 }

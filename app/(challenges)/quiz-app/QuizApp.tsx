@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Question } from "./types/questions";
 import { shuffleQuestions } from "./questions/questions";
+import Link from "next/link";
 
 export default function QuizApp() {
 
@@ -101,6 +102,9 @@ export default function QuizApp() {
               </button>
             </div>
           </div>
+        <div className="mt-5">
+                <Link href="https://github.com/atanas-zlatev-98/coding-challenges/tree/master/app/(challenges)/quiz-app" className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">GitHub Link</Link>
+        </div>
         </div>
       )}
     </>

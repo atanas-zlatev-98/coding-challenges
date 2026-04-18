@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from "react";
 import { usePagination } from "../../(hooks)/use-pagination-hook/usePagination";
+import Link from "next/link";
 
 type User = {
     id: number;
@@ -79,6 +80,12 @@ export default function PaginationPageSearch() {
                     </div>)}
                 </div>
             )}
+
+          <div className="mt-5 flex flex-col gap-2">
+              <Link href="https://github.com/atanas-zlatev-98/coding-challenges/blob/master/app/(challenges)/pagination-search/page.tsx" className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded text-center">GitHub Link</Link>
+              <Link href="https://github.com/atanas-zlatev-98/coding-challenges/blob/master/app/(hooks)/use-pagination-hook/usePagination.ts" className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded text-center">Pagination GitHub Link</Link>
+          </div>
+
         </div>
     )
 }

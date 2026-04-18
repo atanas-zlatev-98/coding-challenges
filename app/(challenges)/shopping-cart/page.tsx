@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { CartItem, Product } from "./types/product";
 import { products as prod } from "./products/products";
+import Link from "next/link";
 
 export default function ShoppingCartPage() {
 
@@ -113,6 +114,9 @@ export default function ShoppingCartPage() {
           </div>
         </div>
       </div>
+      <div className="mt-5">
+              <Link href="https://github.com/atanas-zlatev-98/coding-challenges/blob/master/app/(challenges)/shopping-cart/page.tsx" className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">GitHub Link</Link>
+        </div>
     </div>
   );
 }

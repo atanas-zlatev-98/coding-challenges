@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useRef, useState } from "react";
 
 type ToDoType = {
@@ -24,7 +25,7 @@ export default function ToDoListPage() {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen gap-1">
+    <div className="flex flex-col justify-center items-center h-screen gap-1">
       <div className="w-[500px] bg-amber-100 text-black justify-center items-center p-2 rounded">
         <h1 className="text-3xl font-bold mb-4 text-center">To-Do List</h1>
 
@@ -67,6 +68,9 @@ export default function ToDoListPage() {
           )}
         </div>
       </div>
+      <div className="mt-5">
+              <Link href="https://github.com/atanas-zlatev-98/coding-challenges/blob/master/app/(challenges)/todo-list/page.tsx" className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">GitHub Link</Link>
+        </div>
     </div>
   );
 }
