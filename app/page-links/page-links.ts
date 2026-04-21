@@ -13,4 +13,5 @@ export const pageLinks = [
   { href: "/form-validation-zod", label: "Form Validation with Zod Challenge", category: "components" },
   { href: "/use-memo", label: "useMemo Challenge", category: "hooks" },
   { href: '/use-reducer', label: "useReducer Challenge", category: "hooks" },
+  { href: "/use-ref", label: "useRef Challenge", category: "hooks" },
 ];
