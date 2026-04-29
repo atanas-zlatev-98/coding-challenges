@@ -17,6 +17,14 @@ export default function Home() {
             {link.label}
           </Link>))}
        </div>
+
+           <h2 className="text-5xl font-bold text-gray-800 dark:text-gray-200 mb-7">State Management</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+        {pageLinks.map((link) => link.category === "state-management" && (<Link key={link.href} href={link.href} className="flex rounded border text-center items-center justify-center  text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4 hover:bg-white hover:text-black">
+            {link.label}
+          </Link>))}
+       </div>
+
       </main>
     </div>
   );

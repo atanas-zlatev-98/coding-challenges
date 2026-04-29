@@ -14,4 +14,5 @@ export const pageLinks = [
   { href: "/use-memo", label: "useMemo Challenge", category: "hooks" },
   { href: '/use-reducer', label: "useReducer Challenge", category: "hooks" },
   { href: "/use-ref", label: "useRef Challenge", category: "hooks" },
+  { href: "/redux-state-management", label: "Redux State Management Challenge", category: "state-management" },
 ];
